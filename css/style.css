@@ -1488,3 +1488,34 @@ img {
   border: 1px solid #c0392b;
   color: #c0392b;
 }
+
+/* ================================
+   ABOUT PAGE — PROFILE PHOTO
+================================ */
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+
+/* ================================
+   HOMEPAGE — LATEST WORK PHOTOS
+================================ */
+
+.photo-card img {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.photo-card img:hover {
+  transform: scale(1.04);
+  opacity: 0.88;
+}
