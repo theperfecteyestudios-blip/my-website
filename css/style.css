@@ -253,6 +253,15 @@ img {
   text-transform: uppercase;
 }
 
+.hero-tagline {
+  font-size: 15px;
+  color: #f4b942;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  font-weight: 600;
+  opacity: 0.85;
+}
 
 /* ================================
    INTRO SECTION

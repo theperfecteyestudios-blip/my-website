@@ -1,5 +1,5 @@
 // ================================================
-//   THE PERFECT EYE STUDIOS
+//   StreetLight Creative Studios
 //   script.js — Final Complete Version
 // ================================================
 
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const whatsappNumber  = '233207918365'
   const whatsappMessage = encodeURIComponent(
-    'Hi! I visited The Perfect Eye Studios website and would love to work with you.'
+    'Hi! I visited StreetLight Creative Studios website and would love to work with you.'
   )
 
   const isMobile     = /iPhone|Android|iPad/i.test(navigator.userAgent)
