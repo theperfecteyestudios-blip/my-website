@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #111118;
+  background-color: #070b14;
   color: #f5f0e8;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
@@ -80,7 +80,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
-  background-color: #0a0a0f;
+  background-color: #060810;
   border-bottom: 1px solid rgba(212, 160, 23, 0.15);
   position: sticky;
   top: 0;
@@ -157,7 +157,7 @@ img {
   position: absolute;
   top: calc(100% + 16px);
   left: 0;
-  background-color: #0a0a0f;
+  background-color: #060810;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 6px;
   min-width: 200px;
@@ -195,7 +195,7 @@ img {
 ================================ */
 
 .page-header {
-  background-color: #111118;
+  background-color: #070b14;
   text-align: center;
   padding: 80px 80px 60px;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
@@ -228,7 +228,7 @@ img {
   align-items: center;
   text-align: center;
   padding: 80px;
-  background-color: #0a0a0f;
+  background-color: #060810;
   background-image: radial-gradient(
     ellipse at center,
     rgba(212, 160, 23, 0.08) 0%,
@@ -285,7 +285,7 @@ img {
 
 .services-highlight {
   padding: 80px;
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .services-highlight h2 {
@@ -304,7 +304,7 @@ img {
 }
 
 .card {
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 8px;
   padding: 36px 28px;
@@ -318,7 +318,7 @@ img {
 
 .card:hover {
   border-color: rgba(212, 160, 23, 0.45);
-  background-color: #242430;
+  background-color: #111d35;
   transform: translateY(-4px);
 }
 
@@ -356,7 +356,7 @@ img {
 .portfolio-teaser {
   padding: 80px;
   text-align: center;
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .portfolio-teaser h2 {
@@ -380,7 +380,7 @@ img {
 }
 
 .photo-placeholder {
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 8px;
   width: 280px;
@@ -398,7 +398,7 @@ img {
 ================================ */
 
 .podcast-teaser {
-  background-color: #111118;
+  background-color: #070b14;
   text-align: center;
   padding: 80px;
   border-top: 1px solid rgba(212, 160, 23, 0.10);
@@ -432,7 +432,7 @@ img {
   align-items: flex-start;
   padding: 64px 80px;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .service-icon {
@@ -491,7 +491,7 @@ img {
   justify-content: center;
   gap: 16px;
   padding: 40px 80px;
-  background-color: #111118;
+  background-color: #070b14;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
   flex-wrap: wrap;
 }
@@ -518,7 +518,7 @@ img {
 .portfolio-section {
   padding: 64px 80px;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .portfolio-section h2 {
@@ -555,7 +555,7 @@ img {
 .video-card {
   flex: 1;
   min-width: 240px;
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 8px;
   padding: 24px;
@@ -565,7 +565,7 @@ img {
 .content-card:hover,
 .video-card:hover {
   border-color: rgba(212, 160, 23, 0.45);
-  background-color: #242430;
+  background-color: #111d35;
 }
 
 .content-card h3,
@@ -583,7 +583,7 @@ img {
 }
 
 .video-placeholder {
-  background-color: #111118;
+  background-color: #070b14;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 6px;
   height: 160px;
@@ -605,11 +605,11 @@ img {
   gap: 48px;
   text-align: left;
   padding: 80px;
-  background-color: #0a0a0f;
+  background-color: #060810;
 }
 
 .podcast-cover {
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 12px;
   width: 200px;
@@ -639,7 +639,7 @@ img {
 .about-show {
   padding: 64px 80px;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .about-show h2 {
@@ -660,7 +660,7 @@ img {
 .episodes-section {
   padding: 64px 80px;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .episodes-section h2 {
@@ -717,7 +717,7 @@ img {
   padding: 64px 80px;
   text-align: center;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .listen-section h2 {
@@ -759,7 +759,7 @@ img {
 .guest-cta {
   text-align: center;
   padding: 80px;
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .guest-cta h2 {
@@ -787,11 +787,11 @@ img {
   align-items: flex-start;
   padding: 80px;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .about-image {
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 12px;
   width: 320px;
@@ -821,7 +821,7 @@ img {
 
 .about-skills {
   padding: 80px;
-  background-color: #0a0a0f;
+  background-color: #060810;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
 }
 
@@ -841,7 +841,7 @@ img {
 }
 
 .skill-card {
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 8px;
   padding: 36px 28px;
@@ -854,7 +854,7 @@ img {
 
 .skill-card:hover {
   border-color: rgba(212, 160, 23, 0.45);
-  background-color: #242430;
+  background-color: #111d35;
 }
 
 .skill-icon {
@@ -878,7 +878,7 @@ img {
 .about-values {
   padding: 80px;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .about-values h2 {
@@ -897,7 +897,7 @@ img {
 }
 
 .value-card {
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 8px;
   padding: 32px 24px;
@@ -909,7 +909,7 @@ img {
 
 .value-card:hover {
   border-color: rgba(212, 160, 23, 0.45);
-  background-color: #242430;
+  background-color: #111d35;
 }
 
 .value-card h3 {
@@ -927,7 +927,7 @@ img {
 
 .fun-facts {
   padding: 80px;
-  background-color: #0a0a0f;
+  background-color: #060810;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
 }
 
@@ -963,7 +963,7 @@ img {
   padding: 80px;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
   align-items: flex-start;
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .contact-form {
@@ -995,7 +995,7 @@ img {
 .form-group select,
 .form-group textarea {
   width: 100%;
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   color: #f5f0e8;
   padding: 14px 16px;
@@ -1013,7 +1013,7 @@ img {
 }
 
 .form-group select option {
-  background-color: #1a1a22;
+  background-color: #0d1526;
   color: #f5f0e8;
 }
 
@@ -1061,7 +1061,7 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: #1a1a22;
+  background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 4px;
   padding: 16px 20px;
@@ -1091,7 +1091,7 @@ img {
 
 .faq-section {
   padding: 80px;
-  background-color: #111118;
+  background-color: #070b14;
 }
 
 .faq-section h2 {
@@ -1130,7 +1130,7 @@ img {
 .cta-section {
   text-align: center;
   padding: 100px 80px;
-  background-color: #0a0a0f;
+  background-color: #060810;
   border-top: 1px solid rgba(212, 160, 23, 0.10);
 }
 
@@ -1156,7 +1156,7 @@ img {
 ================================ */
 
 .footer {
-  background-color: #0a0a0f;
+  background-color: #060810;
   border-top: 1px solid rgba(212, 160, 23, 0.15);
   text-align: center;
   padding: 60px 80px;
@@ -1298,7 +1298,7 @@ img {
     top: 70px;
     left: 0;
     width: 100%;
-    background-color: #0a0a0f;
+    background-color: #060810;
     border-bottom: 1px solid rgba(212, 160, 23, 0.15);
     padding: 20px 40px;
     gap: 4px;
