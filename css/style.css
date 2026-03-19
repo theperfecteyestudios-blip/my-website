@@ -1746,6 +1746,16 @@ img {
   text-transform: none;
 }
 
+/* ================================
+   MUSIC PAGE — ARTIST PHOTO
+   PLACEHOLDER
+================================ */
+
+.about-image .content-placeholder {
+  height: 100%;
+  border-radius: 12px;
+}
+
 .video-placeholder {
   background: linear-gradient(
     135deg,
