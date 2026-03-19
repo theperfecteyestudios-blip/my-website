@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  // Highlight dropdown toggle when on a dropdown page
   if (dropdown) {
     const dropdownPages = [
       'photography.html',
@@ -395,24 +394,19 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
 
-// ================================================
-//   END
-// ================================================
-
-// ================================================
+  // ================================================
   //   15. LIGHTBOX — PHOTO & VIDEO VIEWER
   // ================================================
 
-  // Build the lightbox HTML
-  const lightboxHTML = `
-    <div class="lightbox-overlay" id="lightbox">
-      <button class="lightbox-close" id="lightboxClose">✕</button>
-      <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-      <div class="lightbox-content" id="lightboxContent"></div>
-      <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
-      <p class="lightbox-caption" id="lightboxCaption"></p>
-    </div>
-  `
+  const lightboxHTML =
+    '<div class="lightbox-overlay" id="lightbox">' +
+    '<button class="lightbox-close" id="lightboxClose">✕</button>' +
+    '<button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>' +
+    '<div class="lightbox-content" id="lightboxContent"></div>' +
+    '<button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>' +
+    '<p class="lightbox-caption" id="lightboxCaption"></p>' +
+    '</div>'
+
   document.body.insertAdjacentHTML('beforeend', lightboxHTML)
 
   const lightbox        = document.getElementById('lightbox')
@@ -425,7 +419,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentImages = []
   let currentIndex  = 0
 
-  // Collect all clickable photo cards
   function setupLightbox () {
 
     // --- PHOTOS ---
@@ -454,18 +447,18 @@ document.addEventListener('DOMContentLoaded', function () {
     videoPlaceholders.forEach(function (placeholder) {
       placeholder.addEventListener('click', function () {
         const videoSrc = placeholder.getAttribute('data-video')
-        if (videoSrc) {
+        if (videoSrc && !videoSrc.includes('YOURVIDEOID')) {
           openLightboxVideo(videoSrc)
         }
       })
     })
 
-    // --- VIDEO CARD IMAGES (thumbnails) ---
+    // --- VIDEO CARD IMAGES ---
     const videoThumbs = document.querySelectorAll('.video-card img')
     videoThumbs.forEach(function (img) {
       img.addEventListener('click', function () {
         const videoSrc = img.getAttribute('data-video')
-        if (videoSrc) {
+        if (videoSrc && !videoSrc.includes('YOURVIDEOID')) {
           openLightboxVideo(videoSrc)
         } else {
           currentImages = []
@@ -473,11 +466,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       })
     })
-
   }
 
   function openLightboxImage (img) {
-    lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt || ''}">`
+    lightboxContent.innerHTML   = '<img src="' + img.src + '" alt="' + (img.alt || '') + '">'
     lightboxCaption.textContent = img.alt || ''
     lightbox.classList.add('active')
     document.body.style.overflow = 'hidden'
@@ -485,37 +477,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function openLightboxVideo (src) {
-    // Check if YouTube link
     if (src.includes('youtube.com') || src.includes('youtu.be')) {
       const videoId = src.includes('youtu.be')
         ? src.split('youtu.be/')[1].split('?')[0]
         : src.split('v=')[1].split('&')[0]
-      lightboxContent.innerHTML = `
-        <iframe
-          src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-          allow="autoplay; fullscreen"
-          allowfullscreen>
-        </iframe>`
+      lightboxContent.innerHTML =
+        '<iframe src="https://www.youtube.com/embed/' + videoId +
+        '?autoplay=1" allow="autoplay; fullscreen" allowfullscreen></iframe>'
     } else {
-      lightboxContent.innerHTML = `
-        <video controls autoplay>
-          <source src="${src}">
-        </video>`
+      lightboxContent.innerHTML =
+        '<video controls autoplay><source src="' + src + '"></video>'
     }
-    lightboxCaption.textContent = ''
+    lightboxCaption.textContent  = ''
     lightbox.classList.add('active')
     document.body.style.overflow = 'hidden'
-    lightboxPrev.style.display = 'none'
-    lightboxNext.style.display = 'none'
+    lightboxPrev.style.display   = 'none'
+    lightboxNext.style.display   = 'none'
   }
 
   function closeLightbox () {
     lightbox.classList.remove('active')
-    lightboxContent.innerHTML = ''
-    lightboxCaption.textContent = ''
+    lightboxContent.innerHTML    = ''
+    lightboxCaption.textContent  = ''
     document.body.style.overflow = ''
-    lightboxPrev.style.display = 'flex'
-    lightboxNext.style.display = 'flex'
+    lightboxPrev.style.display   = 'flex'
+    lightboxNext.style.display   = 'flex'
   }
 
   function updateNavButtons () {
@@ -540,17 +526,14 @@ document.addEventListener('DOMContentLoaded', function () {
     openLightboxImage(currentImages[currentIndex])
   }
 
-  // Event listeners
   lightboxClose.addEventListener('click', closeLightbox)
   lightboxPrev.addEventListener('click', showPrev)
   lightboxNext.addEventListener('click', showNext)
 
-  // Close on background click
   lightbox.addEventListener('click', function (e) {
     if (e.target === lightbox) closeLightbox()
   })
 
-  // Keyboard navigation
   document.addEventListener('keydown', function (e) {
     if (!lightbox.classList.contains('active')) return
     if (e.key === 'Escape')     closeLightbox()
@@ -558,6 +541,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'ArrowRight') showNext()
   })
 
-  // Initialise
   setupLightbox()
+
+
+// ================================================
+//   END
+// ================================================
 })
