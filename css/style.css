@@ -1248,6 +1248,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   border-radius: 12px;
   display: block;
 }
@@ -1507,9 +1508,10 @@ img {
 ================================ */
 
 .photo-card img {
-  width: 280px;
-  height: 200px;
+  width: 100%;
+  height: 260px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 8px;
   display: block;
   transition: transform 0.4s ease, opacity 0.3s ease;
@@ -1537,9 +1539,10 @@ img {
 }
 
 .portfolio-section .photo-card img {
-  width: 280px;
-  height: 200px;
+  width: 100%;
+  height: 260px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 8px;
   display: block;
   border: 1px solid rgba(244, 185, 66, 0.18);
