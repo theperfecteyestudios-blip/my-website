@@ -398,4 +398,166 @@ document.addEventListener('DOMContentLoaded', function () {
 // ================================================
 //   END
 // ================================================
+
+// ================================================
+  //   15. LIGHTBOX — PHOTO & VIDEO VIEWER
+  // ================================================
+
+  // Build the lightbox HTML
+  const lightboxHTML = `
+    <div class="lightbox-overlay" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+      <div class="lightbox-content" id="lightboxContent"></div>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  `
+  document.body.insertAdjacentHTML('beforeend', lightboxHTML)
+
+  const lightbox        = document.getElementById('lightbox')
+  const lightboxContent = document.getElementById('lightboxContent')
+  const lightboxCaption = document.getElementById('lightboxCaption')
+  const lightboxClose   = document.getElementById('lightboxClose')
+  const lightboxPrev    = document.getElementById('lightboxPrev')
+  const lightboxNext    = document.getElementById('lightboxNext')
+
+  let currentImages = []
+  let currentIndex  = 0
+
+  // Collect all clickable photo cards
+  function setupLightbox () {
+
+    // --- PHOTOS ---
+    const photoCards = document.querySelectorAll('.photo-card img')
+    const photoArray = Array.from(photoCards)
+
+    photoCards.forEach(function (img, index) {
+      img.addEventListener('click', function () {
+        currentImages = photoArray
+        currentIndex  = index
+        openLightboxImage(img)
+      })
+    })
+
+    // --- CONTENT CARD IMAGES ---
+    const contentImages = document.querySelectorAll('.content-card img')
+    contentImages.forEach(function (img) {
+      img.addEventListener('click', function () {
+        currentImages = []
+        openLightboxImage(img)
+      })
+    })
+
+    // --- VIDEO PLACEHOLDERS ---
+    const videoPlaceholders = document.querySelectorAll('.video-placeholder')
+    videoPlaceholders.forEach(function (placeholder) {
+      placeholder.addEventListener('click', function () {
+        const videoSrc = placeholder.getAttribute('data-video')
+        if (videoSrc) {
+          openLightboxVideo(videoSrc)
+        }
+      })
+    })
+
+    // --- VIDEO CARD IMAGES (thumbnails) ---
+    const videoThumbs = document.querySelectorAll('.video-card img')
+    videoThumbs.forEach(function (img) {
+      img.addEventListener('click', function () {
+        const videoSrc = img.getAttribute('data-video')
+        if (videoSrc) {
+          openLightboxVideo(videoSrc)
+        } else {
+          currentImages = []
+          openLightboxImage(img)
+        }
+      })
+    })
+
+  }
+
+  function openLightboxImage (img) {
+    lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt || ''}">`
+    lightboxCaption.textContent = img.alt || ''
+    lightbox.classList.add('active')
+    document.body.style.overflow = 'hidden'
+    updateNavButtons()
+  }
+
+  function openLightboxVideo (src) {
+    // Check if YouTube link
+    if (src.includes('youtube.com') || src.includes('youtu.be')) {
+      const videoId = src.includes('youtu.be')
+        ? src.split('youtu.be/')[1].split('?')[0]
+        : src.split('v=')[1].split('&')[0]
+      lightboxContent.innerHTML = `
+        <iframe
+          src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+          allow="autoplay; fullscreen"
+          allowfullscreen>
+        </iframe>`
+    } else {
+      lightboxContent.innerHTML = `
+        <video controls autoplay>
+          <source src="${src}">
+        </video>`
+    }
+    lightboxCaption.textContent = ''
+    lightbox.classList.add('active')
+    document.body.style.overflow = 'hidden'
+    lightboxPrev.style.display = 'none'
+    lightboxNext.style.display = 'none'
+  }
+
+  function closeLightbox () {
+    lightbox.classList.remove('active')
+    lightboxContent.innerHTML = ''
+    lightboxCaption.textContent = ''
+    document.body.style.overflow = ''
+    lightboxPrev.style.display = 'flex'
+    lightboxNext.style.display = 'flex'
+  }
+
+  function updateNavButtons () {
+    if (currentImages.length <= 1) {
+      lightboxPrev.style.display = 'none'
+      lightboxNext.style.display = 'none'
+    } else {
+      lightboxPrev.style.display = 'flex'
+      lightboxNext.style.display = 'flex'
+    }
+  }
+
+  function showPrev () {
+    if (currentImages.length === 0) return
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length
+    openLightboxImage(currentImages[currentIndex])
+  }
+
+  function showNext () {
+    if (currentImages.length === 0) return
+    currentIndex = (currentIndex + 1) % currentImages.length
+    openLightboxImage(currentImages[currentIndex])
+  }
+
+  // Event listeners
+  lightboxClose.addEventListener('click', closeLightbox)
+  lightboxPrev.addEventListener('click', showPrev)
+  lightboxNext.addEventListener('click', showNext)
+
+  // Close on background click
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox()
+  })
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox.classList.contains('active')) return
+    if (e.key === 'Escape')     closeLightbox()
+    if (e.key === 'ArrowLeft')  showPrev()
+    if (e.key === 'ArrowRight') showNext()
+  })
+
+  // Initialise
+  setupLightbox()
 })

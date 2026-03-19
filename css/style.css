@@ -1562,3 +1562,229 @@ img {
   color: #8899aa;
   margin-top: 10px;
 }
+
+/* ================================
+   LIGHTBOX — PHOTO & VIDEO VIEWER
+================================ */
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-content video {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-content iframe {
+  width: 80vw;
+  height: 45vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  font-size: 36px;
+  color: #f5f0e8;
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+  z-index: 10000;
+}
+
+.lightbox-close:hover {
+  color: #d4a017;
+  transform: scale(1.2);
+}
+
+.lightbox-caption {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #9a9080;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(13, 21, 38, 0.8);
+  border: 1px solid rgba(212, 160, 23, 0.30);
+  color: #f5f0e8;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease,
+              border-color 0.2s ease,
+              color 0.2s ease;
+  z-index: 10000;
+}
+
+.lightbox-nav:hover {
+  background: rgba(212, 160, 23, 0.15);
+  border-color: rgba(212, 160, 23, 0.60);
+  color: #d4a017;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+/* Make photo cards show a zoom cursor */
+.photo-card img,
+.content-card img,
+.video-card img,
+.video-placeholder {
+  cursor: pointer;
+}
+
+/* ================================
+   PREMIUM PLACEHOLDERS
+================================ */
+
+.content-placeholder {
+  background: linear-gradient(
+    135deg,
+    #0d1526 0%,
+    #111d35 50%,
+    #0d1526 100%
+  );
+  border: 1px dashed rgba(212, 160, 23, 0.30);
+  border-radius: 8px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #8b6914;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.content-placeholder:hover {
+  border-color: rgba(212, 160, 23, 0.50);
+  background: linear-gradient(
+    135deg,
+    #111d35 0%,
+    #162040 50%,
+    #111d35 100%
+  );
+}
+
+.content-placeholder .placeholder-icon {
+  font-size: 32px;
+  opacity: 0.6;
+}
+
+.content-placeholder .placeholder-text {
+  font-size: 11px;
+  color: #5a5040;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+.video-placeholder {
+  background: linear-gradient(
+    135deg,
+    #0d1526 0%,
+    #111d35 50%,
+    #0d1526 100%
+  );
+  border: 1px dashed rgba(212, 160, 23, 0.30);
+  border-radius: 8px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #8b6914;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.video-placeholder:hover {
+  border-color: rgba(212, 160, 23, 0.55);
+  background: linear-gradient(
+    135deg,
+    #111d35 0%,
+    #162040 50%,
+    #111d35 100%
+  );
+}
+
+.video-placeholder .placeholder-icon {
+  font-size: 36px;
+  opacity: 0.7;
+}
+
+.video-placeholder .placeholder-text {
+  font-size: 11px;
+  color: #5a5040;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
