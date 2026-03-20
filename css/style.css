@@ -29,7 +29,7 @@ ul {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   display: block;
 }
 
@@ -92,6 +92,15 @@ img {
   font-weight: 800;
   color: #f5f0e8;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -249,7 +258,7 @@ img {
   font-size: 18px;
   color: #8b6914;
   letter-spacing: 3px;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
@@ -262,6 +271,7 @@ img {
   font-weight: 600;
   opacity: 0.85;
 }
+
 
 /* ================================
    INTRO SECTION
@@ -380,6 +390,12 @@ img {
   margin-bottom: 40px;
 }
 
+
+/* ================================
+   PHOTO GRID & PHOTO CARDS
+   — Single unified definition
+================================ */
+
 .photo-grid {
   display: flex;
   gap: 20px;
@@ -388,12 +404,50 @@ img {
   margin-bottom: 40px;
 }
 
+.photo-card {
+  flex: 1;
+  min-width: 240px;
+  max-width: 340px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #0d1526;
+  text-align: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 8px;
+  display: block;
+  border: 1px solid rgba(212, 160, 23, 0.18);
+  transition: transform 0.4s ease,
+              opacity 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.photo-card img:hover {
+  transform: scale(1.04);
+  opacity: 0.88;
+  border-color: rgba(212, 160, 23, 0.50);
+  cursor: pointer;
+}
+
+.photo-card p {
+  font-size: 13px;
+  color: #9a9080;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 0 8px 12px;
+}
+
 .photo-placeholder {
   background-color: #0d1526;
   border: 1px solid rgba(212, 160, 23, 0.18);
   border-radius: 8px;
-  width: 280px;
-  height: 200px;
+  width: 100%;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -542,17 +596,6 @@ img {
   margin-bottom: 36px;
 }
 
-.photo-card {
-  text-align: center;
-}
-
-.photo-card p {
-  font-size: 13px;
-  color: #9a9080;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
 .content-grid,
 .video-grid {
   display: flex;
@@ -577,6 +620,24 @@ img {
   background-color: #111d35;
 }
 
+.content-card img,
+.video-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.content-card img:hover,
+.video-card img:hover {
+  transform: scale(1.03);
+  opacity: 0.85;
+}
+
 .content-card h3,
 .video-card h3 {
   font-size: 18px;
@@ -588,18 +649,6 @@ img {
 .content-card p,
 .video-card p {
   color: #9a9080;
-  font-size: 14px;
-}
-
-.video-placeholder {
-  background-color: #070b14;
-  border: 1px solid rgba(212, 160, 23, 0.18);
-  border-radius: 6px;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #5a5040;
   font-size: 14px;
 }
 
@@ -630,6 +679,14 @@ img {
   color: #5a5040;
   font-size: 13px;
   overflow: hidden;
+}
+
+.podcast-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 .podcast-header-text h1 {
@@ -812,6 +869,15 @@ img {
   color: #5a5040;
   font-size: 14px;
   overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  display: block;
 }
 
 .about-text h2 {
@@ -1179,6 +1245,14 @@ img {
   letter-spacing: 1px;
 }
 
+.footer-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+  margin: 0 auto 28px;
+  object-fit: contain;
+}
+
 .footer-links {
   display: flex;
   justify-content: center;
@@ -1219,53 +1293,6 @@ img {
 .footer p:last-child {
   font-size: 13px;
   color: #5a5040;
-}
-
-
-/* ================================
-   IMAGES
-================================ */
-
-.photo-card img,
-.content-card img,
-.video-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 6px;
-  display: block;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.photo-card img:hover,
-.content-card img:hover,
-.video-card img:hover {
-  transform: scale(1.03);
-  opacity: 0.85;
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 12px;
-  display: block;
-}
-
-.podcast-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-
-.photo-grid .photo-card img {
-  width: 280px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
 }
 
 
@@ -1327,7 +1354,6 @@ img {
     width: 100%;
   }
 
-  /* Dropdown becomes inline on mobile */
   .dropdown-menu {
     position: static;
     box-shadow: none;
@@ -1361,7 +1387,7 @@ img {
   .service-block,
   .about-story,
   .contact-wrapper,
-  .podcast-header  {
+  .podcast-header {
     flex-direction: column;
     padding: 48px 32px;
   }
@@ -1369,6 +1395,7 @@ img {
   .about-image {
     width: 100%;
     min-width: unset;
+    height: 320px;
   }
 
   .skills-grid,
@@ -1378,6 +1405,11 @@ img {
   .platform-links  { flex-direction: column; align-items: center; }
   .photo-grid      { flex-direction: column; align-items: center; }
   .page-header     { padding: 60px 32px; }
+
+  .photo-card {
+    width: 100%;
+    max-width: 100%;
+  }
 
   .portfolio-filter,
   .portfolio-section,
@@ -1490,81 +1522,6 @@ img {
   color: #c0392b;
 }
 
-/* ================================
-   ABOUT PAGE — PROFILE PHOTO
-================================ */
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-
-
-/* ================================
-   HOMEPAGE — LATEST WORK PHOTOS
-================================ */
-
-.photo-card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 8px;
-  display: block;
-  border: 1px solid rgba(212, 160, 23, 0.18);
-  transition: transform 0.4s ease,
-              opacity 0.3s ease,
-              border-color 0.3s ease;
-}
-
-.photo-card img:hover {
-  transform: scale(1.04);
-  opacity: 0.88;
-}
-
-/* ================================
-   PHOTOGRAPHY PAGE — GALLERY
-================================ */
-
-.portfolio-section .photo-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 24px;
-}
-
-.portfolio-section .photo-card {
-  text-align: center;
-}
-
-.photo-card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 8px;
-  display: block;
-  border: 1px solid rgba(212, 160, 23, 0.18);
-  transition: transform 0.4s ease,
-              opacity 0.3s ease,
-              border-color 0.3s ease;
-}
-
-.portfolio-section .photo-card img:hover {
-  transform: scale(1.04);
-  opacity: 0.88;
-  border-color: rgba(244, 185, 66, 0.50);
-}
-
-.portfolio-section .photo-card p {
-  font-size: 13px;
-  color: #8899aa;
-  margin-top: 10px;
-}
 
 /* ================================
    LIGHTBOX — PHOTO & VIDEO VIEWER
@@ -1688,13 +1645,6 @@ img {
 .lightbox-prev { left: 20px; }
 .lightbox-next { right: 20px; }
 
-/* Make photo cards show a zoom cursor */
-.photo-card img,
-.content-card img,
-.video-card img,
-.video-placeholder {
-  cursor: pointer;
-}
 
 /* ================================
    PREMIUM PLACEHOLDERS
@@ -1745,11 +1695,6 @@ img {
   letter-spacing: 0.5px;
   text-transform: none;
 }
-
-/* ================================
-   MUSIC PAGE — ARTIST PHOTO
-   PLACEHOLDER
-================================ */
 
 .about-image .content-placeholder {
   height: 100%;
