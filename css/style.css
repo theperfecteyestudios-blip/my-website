@@ -79,24 +79,31 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 16px 80px;
   background-color: #060810;
   border-bottom: 1px solid rgba(212, 160, 23, 0.15);
   position: sticky;
   top: 0;
   z-index: 100;
-  gap: 40px;
+}
+
+.nav-logo {
+  flex-shrink: 0;
 }
 
 .nav-logo a {
   display: flex;
   align-items: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #f5f0e8;
+  letter-spacing: 1px;
 }
 
 .nav-logo img {
-  height: 60px;
+  height: 55px;
   width: auto;
-  max-width: 220px;
+  max-width: 200px;
   display: block;
   object-fit: contain;
 }
@@ -104,7 +111,8 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
+  margin-left: auto;
 }
 
 .nav-links > li > a {
@@ -113,6 +121,7 @@ img {
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-links > li > a:hover {
@@ -142,6 +151,7 @@ img {
   border: none;
   padding: 0;
   font-family: inherit;
+  white-space: nowrap;
 }
 
 .dropdown-toggle::after {
@@ -391,7 +401,6 @@ img {
 
 /* ================================
    PHOTO GRID & PHOTO CARDS
-   — Single unified definition
 ================================ */
 
 .photo-grid {
@@ -1306,7 +1315,6 @@ img {
   border-radius: 4px;
   transition: border-color 0.3s ease;
   flex-shrink: 0;
-  margin-left: auto;
 }
 
 .hamburger:hover {
@@ -1324,12 +1332,23 @@ img {
     display: block;
   }
 
+  .navbar {
+    padding: 16px 24px;
+    position: relative;
+    gap: 16px;
+  }
+
+  .nav-logo img {
+    height: 44px;
+    max-width: 160px;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 70px;
+    top: 76px;
     left: 0;
     width: 100%;
     background-color: #060810;
@@ -1337,6 +1356,7 @@ img {
     padding: 20px 40px;
     gap: 4px;
     z-index: 99;
+    margin-left: 0;
   }
 
   .nav-links.nav-open {
@@ -1370,11 +1390,6 @@ img {
     padding: 8px 0;
     border-bottom: none;
     font-size: 14px;
-  }
-
-  .navbar {
-    padding: 20px 32px;
-    position: relative;
   }
 
   .hero h1       { font-size: 36px; }
