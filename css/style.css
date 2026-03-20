@@ -250,12 +250,7 @@ img {
   text-align: center;
   padding: 80px;
   background-color: #070b14;
-  background-image:
-    linear-gradient(
-      rgba(7, 11, 20, 0.65),
-      rgba(7, 11, 20, 0.65)
-    ),
-    url('images/hero-bg.jpg');
+  background-image: url('images/hero-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
