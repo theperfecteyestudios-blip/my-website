@@ -250,7 +250,12 @@ img {
   text-align: center;
   padding: 80px;
   background-color: #070b14;
-  background-image: url('../images/hero-bg.jpg');
+  background-image:
+    linear-gradient(
+      rgba(7, 11, 20, 0.35),
+      rgba(7, 11, 20, 0.35)
+    ),
+    url('../images/hero-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -263,6 +268,8 @@ img {
   margin-bottom: 24px;
   max-width: 800px;
   color: #f5f0e8;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8),
+               0 4px 24px rgba(0, 0, 0, 0.6);
 }
 
 .hero-sub {
@@ -271,6 +278,7 @@ img {
   letter-spacing: 3px;
   margin-bottom: 16px;
   text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .hero-tagline {
@@ -281,8 +289,8 @@ img {
   margin-bottom: 32px;
   font-weight: 600;
   opacity: 0.85;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
-
 
 /* ================================
    INTRO SECTION
