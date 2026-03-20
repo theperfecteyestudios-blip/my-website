@@ -83,7 +83,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 12px 80px;
-  background-color: #1a2540;
+  background-color: #c8daf0;
   border-bottom: 1px solid rgba(212, 160, 23, 0.25);
   position: sticky;
   top: 0;
@@ -121,7 +121,7 @@ img {
 
 .nav-links > li > a {
   font-size: 14px;
-  color: #8b6914;
+  color: #1a3a6b;
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
@@ -143,7 +143,7 @@ img {
 
 .dropdown-toggle {
   font-size: 14px;
-  color: #8b6914;
+  color: #1a3a6b;
   font-weight: 500;
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -178,7 +178,7 @@ img {
   position: absolute;
   top: calc(100% + 16px);
   left: 0;
-  background-color: #1a2540;
+  background-color: #c8daf0;
   border: 1px solid rgba(212, 160, 23, 0.25);
   border-radius: 6px;
   min-width: 200px;
@@ -195,7 +195,7 @@ img {
   display: block;
   padding: 12px 20px;
   font-size: 14px;
-  color: #8b6914;
+  color: #1a3a6b;
   font-weight: 500;
   transition: background-color 0.2s ease, color 0.2s ease;
   border-bottom: 1px solid rgba(212, 160, 23, 0.08);
@@ -1244,7 +1244,7 @@ img {
 ================================ */
 
 .footer {
-  background-color: #1a2540;
+  background-color: #c8daf0;
   border-top: 1px solid rgba(212, 160, 23, 0.25);
   text-align: center;
   padding: 60px 80px;
@@ -1273,7 +1273,7 @@ img {
 
 .footer-links a {
   font-size: 14px;
-  color: #8b6914;
+  color: #1a3a6b;
   transition: color 0.3s ease;
 }
 
@@ -1291,7 +1291,7 @@ img {
 
 .social-links a {
   font-size: 14px;
-  color: #8b6914;
+  color: #1a3a6b;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -1302,7 +1302,7 @@ img {
 
 .footer p:last-child {
   font-size: 13px;
-  color: #5a5040;
+  color: #3a5a7a;
 }
 
 
@@ -1356,7 +1356,7 @@ img {
     top: 72px;
     left: 0;
     width: 100%;
-    background-color: #1a2540;
+    background-color: #c8daf0;
     border-bottom: 1px solid rgba(212, 160, 23, 0.25);
     padding: 20px 32px;
     gap: 4px;

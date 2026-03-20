@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.style.boxShadow         = '0 2px 24px rgba(0, 0, 0, 0.6)'
       navbar.style.borderBottomColor = 'rgba(212, 160, 23, 0.35)'
     } else {
-      navbar.style.backgroundColor   = '#1a2540'
+      navbar.style.backgroundColor   = '#c8daf0'
       navbar.style.boxShadow         = 'none'
       navbar.style.borderBottomColor = 'rgba(212, 160, 23, 0.25)'
     }
