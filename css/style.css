@@ -121,7 +121,7 @@ img {
 
 .nav-links > li > a {
   font-size: 14px;
-  color: #c8d0e0;
+  color: #8b6914;
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
@@ -143,7 +143,7 @@ img {
 
 .dropdown-toggle {
   font-size: 14px;
-  color: #c8d0e0;
+  color: #8b6914;
   font-weight: 500;
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -195,7 +195,7 @@ img {
   display: block;
   padding: 12px 20px;
   font-size: 14px;
-  color: #c8d0e0;
+  color: #8b6914;
   font-weight: 500;
   transition: background-color 0.2s ease, color 0.2s ease;
   border-bottom: 1px solid rgba(212, 160, 23, 0.08);
@@ -1273,7 +1273,7 @@ img {
 
 .footer-links a {
   font-size: 14px;
-  color: #c8d0e0;
+  color: #8b6914;
   transition: color 0.3s ease;
 }
 
@@ -1291,7 +1291,7 @@ img {
 
 .social-links a {
   font-size: 14px;
-  color: #c8d0e0;
+  color: #8b6914;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -1302,7 +1302,7 @@ img {
 
 .footer p:last-child {
   font-size: 13px;
-  color: #8899aa;
+  color: #5a5040;
 }
 
 
