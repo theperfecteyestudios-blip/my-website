@@ -250,11 +250,16 @@ img {
   text-align: center;
   padding: 80px;
   background-color: #070b14;
-  background-image: radial-gradient(
-    ellipse at center,
-    rgba(212, 160, 23, 0.08) 0%,
-    transparent 70%
-  );
+  background-image:
+    linear-gradient(
+      rgba(7, 11, 20, 0.72),
+      rgba(7, 11, 20, 0.72)
+    ),
+    url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hero h1 {
