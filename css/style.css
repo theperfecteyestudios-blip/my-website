@@ -1763,3 +1763,12 @@ img {
   letter-spacing: 0.5px;
   text-transform: none;
 }
+
+/* ================================
+   CONTACT PAGE — WHATSAPP BUTTON
+================================ */
+
+.btn-whatsapp {
+  margin-top: 10px;
+  display: inline-block;
+}
