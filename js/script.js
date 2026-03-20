@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const navbar   = document.querySelector('.navbar')
   const navLinks = document.querySelector('.nav-links')
 
+  if (!navbar || !navLinks) {
+    console.error('Navbar or nav-links not found. Check HTML structure.')
+    return
+  }
+
   const hamburger = document.createElement('button')
   hamburger.classList.add('hamburger')
   hamburger.setAttribute('aria-label', 'Toggle navigation menu')
@@ -97,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'music.html'
     ]
     if (dropdownPages.includes(currentPage)) {
-      dropdown.querySelector('.dropdown-toggle').style.color = '#d4a017'
+      dropdown.querySelector('.dropdown-toggle').style.color = '#f4b942'
     }
   }
 
@@ -108,13 +113,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', function () {
     if (window.scrollY > 60) {
-      navbar.style.backgroundColor   = 'rgba(10, 10, 15, 0.97)'
+      navbar.style.backgroundColor   = 'rgba(20, 30, 55, 0.98)'
       navbar.style.boxShadow         = '0 2px 24px rgba(0, 0, 0, 0.6)'
-      navbar.style.borderBottomColor = 'rgba(212, 160, 23, 0.30)'
+      navbar.style.borderBottomColor = 'rgba(212, 160, 23, 0.35)'
     } else {
-      navbar.style.backgroundColor   = '#060810'
+      navbar.style.backgroundColor   = '#1a2540'
       navbar.style.boxShadow         = 'none'
-      navbar.style.borderBottomColor = 'rgba(212, 160, 23, 0.15)'
+      navbar.style.borderBottomColor = 'rgba(212, 160, 23, 0.25)'
     }
   })
 

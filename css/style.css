@@ -73,15 +73,18 @@ img {
 
 /* ================================
    NAVBAR
+   — lighter background so logo
+     with white bg is less jarring
+     until transparent version ready
 ================================ */
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 80px;
-  background-color: #060810;
-  border-bottom: 1px solid rgba(212, 160, 23, 0.15);
+  padding: 12px 80px;
+  background-color: #1a2540;
+  border-bottom: 1px solid rgba(212, 160, 23, 0.25);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -101,9 +104,9 @@ img {
 }
 
 .nav-logo img {
-  height: 55px;
+  height: 56px;
   width: auto;
-  max-width: 200px;
+  max-width: 220px;
   display: block;
   object-fit: contain;
 }
@@ -113,11 +116,12 @@ img {
   align-items: center;
   gap: 24px;
   margin-left: auto;
+  list-style: none;
 }
 
 .nav-links > li > a {
   font-size: 14px;
-  color: #8b6914;
+  color: #c8d0e0;
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
@@ -125,7 +129,7 @@ img {
 }
 
 .nav-links > li > a:hover {
-  color: #d4a017;
+  color: #f4b942;
 }
 
 
@@ -139,7 +143,7 @@ img {
 
 .dropdown-toggle {
   font-size: 14px;
-  color: #8b6914;
+  color: #c8d0e0;
   font-weight: 500;
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -162,7 +166,7 @@ img {
 
 .dropdown:hover .dropdown-toggle,
 .dropdown.open .dropdown-toggle {
-  color: #d4a017;
+  color: #f4b942;
 }
 
 .dropdown.open .dropdown-toggle::after {
@@ -174,8 +178,8 @@ img {
   position: absolute;
   top: calc(100% + 16px);
   left: 0;
-  background-color: #060810;
-  border: 1px solid rgba(212, 160, 23, 0.18);
+  background-color: #1a2540;
+  border: 1px solid rgba(212, 160, 23, 0.25);
   border-radius: 6px;
   min-width: 200px;
   padding: 8px 0;
@@ -191,7 +195,7 @@ img {
   display: block;
   padding: 12px 20px;
   font-size: 14px;
-  color: #8b6914;
+  color: #c8d0e0;
   font-weight: 500;
   transition: background-color 0.2s ease, color 0.2s ease;
   border-bottom: 1px solid rgba(212, 160, 23, 0.08);
@@ -202,8 +206,8 @@ img {
 }
 
 .dropdown-menu li a:hover {
-  background-color: rgba(212, 160, 23, 0.08);
-  color: #d4a017;
+  background-color: rgba(212, 160, 23, 0.10);
+  color: #f4b942;
 }
 
 
@@ -245,7 +249,7 @@ img {
   align-items: center;
   text-align: center;
   padding: 80px;
-  background-color: #060810;
+  background-color: #070b14;
   background-image: radial-gradient(
     ellipse at center,
     rgba(212, 160, 23, 0.08) 0%,
@@ -670,7 +674,7 @@ img {
   gap: 48px;
   text-align: left;
   padding: 80px;
-  background-color: #060810;
+  background-color: #070b14;
 }
 
 .podcast-cover {
@@ -903,7 +907,7 @@ img {
 
 .about-skills {
   padding: 80px;
-  background-color: #060810;
+  background-color: #0a0f1e;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
 }
 
@@ -1009,7 +1013,7 @@ img {
 
 .fun-facts {
   padding: 80px;
-  background-color: #060810;
+  background-color: #0a0f1e;
   border-bottom: 1px solid rgba(212, 160, 23, 0.10);
 }
 
@@ -1212,7 +1216,7 @@ img {
 .cta-section {
   text-align: center;
   padding: 100px 80px;
-  background-color: #060810;
+  background-color: #0a0f1e;
   border-top: 1px solid rgba(212, 160, 23, 0.10);
 }
 
@@ -1235,11 +1239,13 @@ img {
 
 /* ================================
    FOOTER
+   — lighter background to match
+     navbar so logo is visible
 ================================ */
 
 .footer {
-  background-color: #060810;
-  border-top: 1px solid rgba(212, 160, 23, 0.15);
+  background-color: #1a2540;
+  border-top: 1px solid rgba(212, 160, 23, 0.25);
   text-align: center;
   padding: 60px 80px;
 }
@@ -1267,12 +1273,12 @@ img {
 
 .footer-links a {
   font-size: 14px;
-  color: #8b6914;
+  color: #c8d0e0;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #d4a017;
+  color: #f4b942;
 }
 
 .social-links {
@@ -1285,18 +1291,18 @@ img {
 
 .social-links a {
   font-size: 14px;
-  color: #8b6914;
+  color: #c8d0e0;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #d4a017;
+  color: #f4b942;
 }
 
 .footer p:last-child {
   font-size: 13px;
-  color: #5a5040;
+  color: #8899aa;
 }
 
 
@@ -1307,7 +1313,7 @@ img {
 .hamburger {
   display: none;
   background: none;
-  border: 1px solid rgba(212, 160, 23, 0.18);
+  border: 1px solid rgba(212, 160, 23, 0.35);
   color: #f5f0e8;
   font-size: 22px;
   padding: 8px 14px;
@@ -1318,12 +1324,12 @@ img {
 }
 
 .hamburger:hover {
-  border-color: rgba(212, 160, 23, 0.45);
-  color: #d4a017;
+  border-color: rgba(212, 160, 23, 0.70);
+  color: #f4b942;
 }
 
 .active-link {
-  color: #d4a017 !important;
+  color: #f4b942 !important;
 }
 
 @media (max-width: 968px) {
@@ -1333,14 +1339,13 @@ img {
   }
 
   .navbar {
-    padding: 16px 24px;
+    padding: 12px 24px;
     position: relative;
-    gap: 16px;
   }
 
   .nav-logo img {
-    height: 44px;
-    max-width: 160px;
+    height: 46px;
+    max-width: 170px;
   }
 
   .nav-links {
@@ -1348,12 +1353,12 @@ img {
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 76px;
+    top: 72px;
     left: 0;
     width: 100%;
-    background-color: #060810;
-    border-bottom: 1px solid rgba(212, 160, 23, 0.15);
-    padding: 20px 40px;
+    background-color: #1a2540;
+    border-bottom: 1px solid rgba(212, 160, 23, 0.25);
+    padding: 20px 32px;
     gap: 4px;
     z-index: 99;
     margin-left: 0;
@@ -1375,7 +1380,7 @@ img {
     position: static;
     box-shadow: none;
     border: none;
-    border-left: 2px solid rgba(212, 160, 23, 0.18);
+    border-left: 2px solid rgba(212, 160, 23, 0.25);
     padding: 4px 0 4px 16px;
     margin-top: 4px;
     background-color: transparent;
@@ -1612,7 +1617,7 @@ img {
 }
 
 .lightbox-close:hover {
-  color: #d4a017;
+  color: #f4b942;
   transform: scale(1.2);
 }
 
@@ -1631,8 +1636,8 @@ img {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(13, 21, 38, 0.8);
-  border: 1px solid rgba(212, 160, 23, 0.30);
+  background: rgba(26, 37, 64, 0.85);
+  border: 1px solid rgba(212, 160, 23, 0.35);
   color: #f5f0e8;
   font-size: 24px;
   width: 48px;
@@ -1651,7 +1656,7 @@ img {
 .lightbox-nav:hover {
   background: rgba(212, 160, 23, 0.15);
   border-color: rgba(212, 160, 23, 0.60);
-  color: #d4a017;
+  color: #f4b942;
 }
 
 .lightbox-prev { left: 20px; }
