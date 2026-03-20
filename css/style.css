@@ -85,6 +85,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
+  gap: 40px;
 }
 
 .nav-logo a {
@@ -93,8 +94,9 @@ img {
 }
 
 .nav-logo img {
-  height: 45px;
+  height: 60px;
   width: auto;
+  max-width: 220px;
   display: block;
   object-fit: contain;
 }
@@ -1238,8 +1240,9 @@ img {
 }
 
 .footer-logo img {
-  height: 50px;
+  height: 70px;
   width: auto;
+  max-width: 280px;
   display: block;
   margin: 0 auto 28px;
   object-fit: contain;
@@ -1302,6 +1305,8 @@ img {
   cursor: pointer;
   border-radius: 4px;
   transition: border-color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .hamburger:hover {
