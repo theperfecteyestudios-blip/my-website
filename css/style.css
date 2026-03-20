@@ -88,10 +88,6 @@ img {
 }
 
 .nav-logo a {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5f0e8;
-  letter-spacing: 1px;
   display: flex;
   align-items: center;
 }
@@ -1238,11 +1234,7 @@ img {
 }
 
 .footer-logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: #f5f0e8;
   margin-bottom: 28px;
-  letter-spacing: 1px;
 }
 
 .footer-logo img {
